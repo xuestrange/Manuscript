@@ -1,0 +1,78 @@
+\documentclass[a4paper, 12pt]{article}
+
+
+\usepackage{amsmath,amssymb,amsthm,bm} % 数学符号和公式
+\usepackage{tikz}  % 绘图包
+\usepackage{color} % 用于给超链接指定颜色
+\usepackage{float} % 浮动体
+\usepackage{graphics} % 插入图片
+
+\usepackage{geometry} % 页边距
+\geometry{top=3cm,bottom=3cm,left=2.5cm,right=2.5cm}
+
+\usepackage{fancyhdr} % 页眉页脚设置
+\usepackage{lastpage}
+\pagestyle{fancy}
+\lhead{}
+\rhead{}
+\lfoot{}
+\rfoot{}
+\cfoot{\thepage{}/\pageref*{LastPage}}    % 仅显示页脚中间的页码, *不显示颜色
+\usepackage{booktabs} % 表格
+\usepackage{tabularx}
+\usepackage{caption}  % 图例
+\usepackage{setspace} % 空白
+% ---------------- Pdf_latex From Inkscape --------------- %
+% 用于插入inkscape生成的带有latex标注的图片
+\usepackage{import}
+\graphicspath{{./figure}}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+% -------------------------------------------------------- %
+\usepackage[colorlinks,citecolor=blue,urlcolor=blue]{hyperref} % 超链接格式
+\usepackage{fixdif} % 积分符号\d
+\usepackage[noabbrev]{cleveref} % 参考文献 
+\usepackage[natbibapa]{apacite} % APA格式
+\begin{document}
+% 参考文献格式为APA格式
+\begin{titlepage}
+    \title{A Title for This Paper\thanks{abc}}
+    % 作者和作者简介
+    \author{XXX X\thanks{USTC} \and ZZZ  Z\thanks{CPU}}
+    \date{\today}
+    \maketitle
+    \begin{abstract}
+        \noindent 
+        % 摘要
+        This is you abstract.
+        \\
+        \vspace{0in}\\
+        % 关键字
+        \noindent\textbf{Keywords:} climate, AI, robots\\
+        \bigskip
+    \end{abstract}
+    \setcounter{page}{0}
+    \thispagestyle{empty}
+\end{titlepage}
+\pagebreak \newpage
+\doublespacing
+\section{Introduction}
+Parentheses citation \citep{DunningHuchetteLubin2017,DunningHuchetteLubin2017}, and author-year citation \citet{DunningHuchetteLubin2017}, cite a book \citep[\S 2.1.1]{DunningHuchetteLubin2017}
+\section{Literature Review}
+\section{Data and Descriptive Analysis}
+\section{Robustness Check}
+\section{Managerial Implications}
+\subsection{Posterior Analysis}
+\subsection{Implication on Platform}
+\section{Conclusion and Limitations}
+% 参考文献，另起新页，格式为APA格式
+\clearpage
+\bibliographystyle{apacite}
+\bibliography{bibdemo}
+% 附录，另起新页
+\clearpage
+\section*{Appendix A}
+\subsection*{Appendix A.1}
+\subsection*{Appendix A.2}
+\end{document}
