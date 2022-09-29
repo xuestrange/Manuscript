@@ -32,8 +32,8 @@
 % -------------------------------------------------------- %
 \usepackage[colorlinks,citecolor=blue,urlcolor=blue]{hyperref} % 超链接格式
 \usepackage{fixdif} % 积分符号\d
-\usepackage[noabbrev]{cleveref} % 参考文献 
-\usepackage[natbibapa]{apacite} % APA格式
+\usepackage[noabbrev]{cleveref} % 交叉引用
+\usepackage[natbibapa]{apacite} % 参考文献
 \begin{document}
 % 参考文献格式为APA格式
 \begin{titlepage}
@@ -57,8 +57,11 @@
 \end{titlepage}
 \pagebreak \newpage
 \doublespacing
-\section{Introduction}
+\section{Introduction}\label{sec:intro}
 Parentheses citation \citep{DunningHuchetteLubin2017,DunningHuchetteLubin2017}, and author-year citation \citet{DunningHuchetteLubin2017}, cite a book \citep[\S 2.1.1]{DunningHuchetteLubin2017}
+
+% \Cref{} 可以用于表格、图片、章节的交叉引用, 不可用于参考文献
+ref you section \Cref{sec:intro}
 \section{Literature Review}
 \section{Data and Descriptive Analysis}
 \section{Robustness Check}
