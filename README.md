@@ -5,4 +5,4 @@
 + 借鉴了SSRN的模板
 
 ## preview
-![预览](https://raw.githubusercontent.com/xuestrange/picGoUploader/main/img/202209291142079.png)
+![预览](https://raw.githubusercontent.com/xuestrange/picGoUploader/main/img/202209301711521.png)
