@@ -30,9 +30,11 @@
 \usepackage{pdfpages}
 \usepackage{transparent}
 % -------------------------------------------------------- %
-\usepackage[colorlinks,citecolor=blue,urlcolor=blue]{hyperref} % 超链接格式
+\usepackage{hyperref} % 超链接格式
 \usepackage{fixdif} % 积分符号\d
 \usepackage[noabbrev]{cleveref} % 交叉引用
+% 颜色设置要在cleveref包之后
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
 \usepackage[natbibapa]{apacite} % 参考文献
 \begin{document}
 % 参考文献格式为APA格式
@@ -62,6 +64,15 @@ Parentheses citation \citep{DunningHuchetteLubin2017,DunningHuchetteLubin2017}, 
 
 % \Cref{} 可以用于表格、图片、章节的交叉引用, 不可用于参考文献
 ref you section \Cref{sec:intro}
+\begin{figure}
+\centering
+% 这里导入的tikz要通过vsc的httpgd浏览器导出， 450 * 300， tikz可以保证最后字体和正文字体一致，字号和ggplot2指定的一致
+\input{./figure/plot.tex}
+
+\caption{a demo figure plotted by ggplot2 in R}
+\label{fig:demo}
+\end{figure}
+cite my figure, \Cref{fig:demo}
 \section{Literature Review}
 \section{Data and Descriptive Analysis}
 \section{Robustness Check}
