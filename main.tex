@@ -37,7 +37,7 @@
 \hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
 \usepackage[natbibapa]{apacite} % 参考文献
 \begin{document}
-% 参考文献格式为APA格式
+
 \begin{titlepage}
     \title{A Title for This Paper\thanks{abc}}
     % 作者和作者简介
@@ -59,6 +59,7 @@
 \end{titlepage}
 \pagebreak \newpage
 \doublespacing
+
 \section{Introduction}\label{sec:intro}
 Parentheses citation \citep{DunningHuchetteLubin2017,DunningHuchetteLubin2017}, and author-year citation \citet{DunningHuchetteLubin2017}, cite a book \citep[\S 2.1.1]{DunningHuchetteLubin2017}
 
@@ -80,13 +81,16 @@ cite my figure, \Cref{fig:demo}
 \subsection{Posterior Analysis}
 \subsection{Implication on Platform}
 \section{Conclusion and Limitations}
+
 % 参考文献，另起新页，格式为APA格式
 \clearpage
 \bibliographystyle{apacite}
 \bibliography{bibdemo}
+
 % 附录，另起新页
 \clearpage
 \section*{Appendix A}
 \subsection*{Appendix A.1}
 \subsection*{Appendix A.2}
+
 \end{document}
