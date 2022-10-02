@@ -25,7 +25,7 @@
 % ---------------- Pdf_latex From Inkscape --------------- %
 % 用于插入inkscape生成的带有latex标注的图片
 \usepackage{import}
-\graphicspath{{./figure}}
+\graphicspath{{./figure}} % 声明 pdf_tex和对应pdf所在的文件夹
 \usepackage{xifthen}
 \usepackage{pdfpages}
 \usepackage{transparent}
@@ -45,7 +45,7 @@
     \date{\today}
     \maketitle
     \begin{abstract}
-        \noindent 
+        \noindent
         % 摘要
         This is you abstract.
         \\
@@ -65,15 +65,22 @@ Parentheses citation \citep{DunningHuchetteLubin2017,DunningHuchetteLubin2017}, 
 
 % \Cref{} 可以用于表格、图片、章节的交叉引用, 不可用于参考文献
 ref you section \Cref{sec:intro}
-\begin{figure}
-\centering
-% 这里导入的tikz要通过vsc的httpgd浏览器导出， 450 * 300， tikz可以保证最后字体和正文字体一致，字号和ggplot2指定的一致
-\input{./figure/plot.tex}
-
-\caption{a demo figure plotted by ggplot2 in R}
-\label{fig:demo}
+\begin{figure}[!htbp]
+    \centering
+    % 这里导入的tikz要通过vsc的httpgd浏览器导出， 450 * 300， tikz可以保证最后字体和正文字体一致，字号和ggplot2指定的一致
+    \input{./figure/plot.tex}
+    \caption{a demo figure plotted by ggplot2 in R}
+    \label{fig:demo}
 \end{figure}
 cite my figure, \Cref{fig:demo}
+
+\begin{figure}[!htbp]
+    \centering
+    % \def\svgwidth{\linewidth}
+    \input{figure/draw.pdf_tex}
+\end{figure}
+
+
 \section{Literature Review}
 \section{Data and Descriptive Analysis}
 \section{Robustness Check}
