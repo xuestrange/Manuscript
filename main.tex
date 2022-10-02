@@ -12,12 +12,14 @@
 
 \usepackage{fancyhdr} % 页眉页脚设置
 \usepackage{lastpage}
-\pagestyle{fancy}
-\lhead{}
-\rhead{}
-\lfoot{}
-\rfoot{}
-\cfoot{\thepage{}/\pageref*{LastPage}}    % 仅显示页脚中间的页码, *不显示颜色
+\fancypagestyle{plain}{%
+    \fancyhf{} % 清空所有预设样式
+    \fancyfoot[C]{\thepage{}/\pageref*{LastPage}} % 设置页脚中心位置
+    \renewcommand{\headrulewidth}{0.4pt} % 页眉横线的宽度
+    \renewcommand{\footrulewidth}{0pt}   % 页脚横线的宽度
+}
+\pagestyle{plain}
+
 \usepackage{booktabs} % 表格
 \usepackage{tabularx}
 \usepackage{caption}  % 图例
