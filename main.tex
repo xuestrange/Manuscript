@@ -22,6 +22,7 @@
 
 \usepackage{booktabs} % 表格
 \usepackage{tabularx}
+\usepackage[flushleft]{threeparttable} % 表格下边的脚注， 靠左对齐
 \usepackage{caption}  % 图例
 \usepackage{setspace} % 空白
 % ---------------- Pdf_latex From Inkscape --------------- %
@@ -38,13 +39,14 @@
 % 颜色设置要在cleveref包之后
 \def\mycolor{purple}
 \hypersetup{colorlinks=true,linkcolor=\mycolor,citecolor=\mycolor,urlcolor=\mycolor}
-\usepackage[natbibapa]{apacite} % 参考文献
+\usepackage{apacite}
+\usepackage{natbib}
 \begin{document}
 
 \begin{titlepage}
     \title{A Title for This Paper\thanks{abc}}
     % 作者和作者简介
-    \author{XXX X\thanks{USTC} \and ZZZ  Z\thanks{CPU}}
+    \author{XJZ\thanks{USTC} \and WLZ\thanks{CPU}}
     \date{\today}
     \maketitle
     \begin{abstract}
