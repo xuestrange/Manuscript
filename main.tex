@@ -3,7 +3,7 @@
 
 \usepackage{amsmath,amssymb,amsthm,bm} % 数学符号和公式
 \usepackage{tikz}  % 绘图包
-\usepackage{color} % 用于给超链接指定颜色
+\usepackage{xcolor} % 用于给超链接指定颜色
 \usepackage{float} % 浮动体
 \usepackage{graphics} % 插入图片
 
@@ -36,7 +36,8 @@
 \usepackage{fixdif} % 积分符号\d
 \usepackage[noabbrev]{cleveref} % 交叉引用
 % 颜色设置要在cleveref包之后
-\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\def\mycolor{purple}
+\hypersetup{colorlinks=true,linkcolor=\mycolor,citecolor=\mycolor,urlcolor=\mycolor}
 \usepackage[natbibapa]{apacite} % 参考文献
 \begin{document}
 
