@@ -41,6 +41,7 @@
 \hypersetup{colorlinks=true,linkcolor=\mycolor,citecolor=\mycolor,urlcolor=\mycolor}
 \usepackage{apacite}
 \usepackage{natbib}
+\bibliographystyle{apacite}
 \begin{document}
 
 \begin{titlepage}
@@ -65,44 +66,9 @@
 \pagebreak \newpage
 \doublespacing
 
-\section{Introduction}\label{sec:intro}
-Parentheses citation \citep{DunningHuchetteLubin2017}, and author-year citation \citet{DunningHuchetteLubin2017}, cite a book \citep[\S 2.1.1]{DunningHuchetteLubin2017}
+\section{Results}\label{sec:results}
 
-% \Cref{} 可以用于表格、图片、章节的交叉引用, 不可用于参考文献
-ref you section \Cref{sec:intro}
-\begin{figure}[!htbp]
-    \centering
-    % 这里导入的tikz要通过vsc的httpgd浏览器导出， 450 * 300， tikz可以保证最后字体和正文字体一致，字号和ggplot2指定的一致
-    \input{./figure/plot.tex}
-    \caption{a demo figure plotted by ggplot2 in R}
-    \label{fig:demo}
-\end{figure}
-cite my figure, \Cref{fig:demo}
-
-\begin{figure}[!htbp]
-    \centering
-    % \def\svgwidth{\linewidth}
-    \input{figure/draw.pdf_tex}
-\end{figure}
-
-
-\section{Literature Review}
-\section{Data and Descriptive Analysis}
-\section{Robustness Check}
-\section{Managerial Implications}
-\subsection{Posterior Analysis}
-\subsection{Implication on Platform}
-\section{Conclusion and Limitations}
-
-% 参考文献，另起新页，格式为APA格式
 \clearpage
-\bibliographystyle{apacite}
-\bibliography{bibdemo}
 
-% 附录，另起新页
-\clearpage
-\section*{Appendix A}
-\subsection*{Appendix A.1}
-\subsection*{Appendix A.2}
 
 \end{document}
