@@ -7,3 +7,5 @@
 
 ## preview
 ![](https://raw.githubusercontent.com/xuestrange/picGoUploader/main/img/202211101728534.png)
+![](https://raw.githubusercontent.com/xuestrange/picGoUploader/main/img20221205225657.png)
+![](https://raw.githubusercontent.com/xuestrange/picGoUploader/main/img20221205225801.png)
