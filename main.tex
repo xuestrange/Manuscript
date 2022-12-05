@@ -21,7 +21,11 @@
 \pagestyle{plain}
 
 \usepackage{booktabs} % 表格
-\usepackage{tabularx}
+\setlength{\arrayrulewidth}{0.08em} % 普通表格的线宽
+\usepackage[flushleft]{threeparttable } % 表格下方的说明
+\usepackage{tabularx} % 环境tabularx， 自动计算表格列宽
+\newcolumntype{Y}{>{\centering\arraybackslash}X} % 居中排列， 且自动计算列宽
+\usepackage{tabularray} % 表格环境， 网页导出的表格的要求
 \usepackage[flushleft]{threeparttable} % 表格下边的脚注， 靠左对齐
 \usepackage{caption}  % 图例
 \usepackage{setspace} % 空白
@@ -94,15 +98,27 @@ cite my figure, \Cref{fig:demo}
 \subsection{Implication on Platform}
 \section{Conclusion and Limitations}
 
+
+% 附录，另起新页
+\clearpage
+\setcounter{section}{0}
+\setcounter{subsection}{0}
+\setcounter{equation}{0}
+\setcounter{table}{0}
+\setcounter{figure}{0}
+% 修改章节、图表的编号
+\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+
+\section{Appendix}
+\subsection{test}
+
 % 参考文献，另起新页，格式为APA格式
 \clearpage
 \bibliographystyle{apacite}
 \bibliography{bibdemo}
-
-% 附录，另起新页
-\clearpage
-\section*{Appendix A}
-\subsection*{Appendix A.1}
-\subsection*{Appendix A.2}
 
 \end{document}
