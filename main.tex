@@ -73,7 +73,7 @@
 Parentheses citation \citep{DunningHuchetteLubin2017}, and author-year citation \citet{DunningHuchetteLubin2017}, cite a book \citep[\S 2.1.1]{DunningHuchetteLubin2017}
 
 % \Cref{} 可以用于表格、图片、章节的交叉引用, 不可用于参考文献
-ref you section \Cref{sec:intro}
+ref you section \Cref{sec:intro}, cite Appendix \ref{sec:app}.
 \begin{figure}[!htbp]
     \centering
     % 这里导入的tikz要通过vsc的httpgd浏览器导出， 450 * 300， tikz可以保证最后字体和正文字体一致，字号和ggplot2指定的一致
@@ -112,9 +112,9 @@ cite my figure, \Cref{fig:demo}
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
 \renewcommand{\thetable}{\thesection.\arabic{table}}
 \renewcommand{\thefigure}{\thesection.\arabic{figure}}
-
-\section{Appendix}
+\section{Appendix} \label{sec:app}
 \subsection{test}
+
 
 % 参考文献，另起新页，格式为APA格式
 \clearpage
