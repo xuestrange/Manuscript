@@ -2,10 +2,10 @@
 
 
 \usepackage{amsmath,amssymb,amsthm,bm} % 数学符号和公式
-\usepackage{tikz}  % 绘图包
 \usepackage{xcolor} % 用于给超链接指定颜色
+\usepackage{tikz}
 \usepackage{float} % 浮动体
-\usepackage{graphics} % 插入图片
+\usepackage{graphics,graphicx} % 插入图片
 
 \usepackage{geometry} % 页边距
 \geometry{top=3cm,bottom=3cm,left=2.5cm,right=2.5cm}
@@ -19,8 +19,7 @@
     \renewcommand{\footrulewidth}{0pt}   % 页脚横线的宽度
 }
 \pagestyle{plain}
-
-\usepackage{tabularray} % 表格环境， 网页导出的表格的要求
+\renewcommand{\arraystretch}{1.2}  % 普通表格的行高
 \usepackage{caption}  % 图例
 \usepackage{setspace} % 行间距设置
 % ---------------- Pdf_latex From Inkscape --------------- %
@@ -37,8 +36,9 @@
 % 颜色设置要在cleveref包之后
 \def\mycolor{purple}
 \hypersetup{colorlinks=true,linkcolor=\mycolor,citecolor=\mycolor,urlcolor=\mycolor}
-\usepackage{apacite}
-\usepackage{natbib}
+\usepackage[style=apa, backend=biber, natbib=true]{biblatex}
+\usepackage{ragged2e}
+\addbibresource{bibdemo.bib}
 \begin{document}
 
 \begin{titlepage}
@@ -113,7 +113,5 @@ cite my figure, \Cref{fig:demo}
 
 % 参考文献，另起新页，格式为APA格式
 \clearpage
-\bibliographystyle{apacite}
-\bibliography{bibdemo}
-
+\printbibliography
 \end{document}
