@@ -1,117 +1,18 @@
-\documentclass[a4paper, 12pt]{article}
-
-
-\usepackage{amsmath,amssymb,amsthm,bm} % 数学符号和公式
-\usepackage{xcolor} % 用于给超链接指定颜色
-\usepackage{tikz}
-\usepackage{float} % 浮动体
-\usepackage{graphics,graphicx} % 插入图片
-
-\usepackage{geometry} % 页边距
-\geometry{top=3cm,bottom=3cm,left=2.5cm,right=2.5cm}
-
-\usepackage{fancyhdr} % 页眉页脚设置
-\usepackage{lastpage}
-\fancypagestyle{plain}{%
-    \fancyhf{} % 清空所有预设样式
-    \fancyfoot[C]{\thepage{}/\pageref*{LastPage}} % 设置页脚中心位置
-    \renewcommand{\headrulewidth}{0.4pt} % 页眉横线的宽度
-    \renewcommand{\footrulewidth}{0pt}   % 页脚横线的宽度
-}
-\pagestyle{plain}
-\renewcommand{\arraystretch}{1.2}  % 普通表格的行高
-\usepackage{caption}  % 图例
-\usepackage{setspace} % 行间距设置
-% ---------------- Pdf_latex From Inkscape --------------- %
-% 用于插入inkscape生成的带有latex标注的图片
-\usepackage{import}
-\graphicspath{{./figure}} % 声明 pdf_tex和对应pdf所在的文件夹
-\usepackage{xifthen}
-\usepackage{pdfpages}
-\usepackage{transparent}
-% -------------------------------------------------------- %
-\usepackage{hyperref} % 超链接格式
-\usepackage{fixdif} % 积分符号\d
-\usepackage[noabbrev]{cleveref} % 交叉引用
-% 颜色设置要在cleveref包之后
-\def\mycolor{purple}
-\hypersetup{colorlinks=true,linkcolor=\mycolor,citecolor=\mycolor,urlcolor=\mycolor}
-\usepackage[style=apa, backend=biber, natbib=true]{biblatex}
-\usepackage{ragged2e}
-\addbibresource{bibdemo.bib}
+\documentclass{ssrn}
+% \addbibresource{references.bib}
+\title{Optimizing Charging Point in Pay-Per-Use Setting: A Structural Model}
 \begin{document}
+\maketitle
+\begin{abstract}
 
-\begin{titlepage}
-    \title{A Title for This Paper\thanks{abc}}
-    % 作者和作者简介
-    \author{XJZ\thanks{USTC} \and WLZ\thanks{CPU}}
-    \date{\today}
-    \maketitle
-    \begin{abstract}
-        \noindent
-        % 摘要部分
-        \onehalfspacing % 1.5倍行距
-        This is you abstract.
-        \\
-        \vspace{0in}\\
-        % 关键字
-        \noindent\textbf{Keywords:} climate, AI, robots\\
-        \bigskip
-    \end{abstract}
-    \setcounter{page}{0}
-    \thispagestyle{empty}
-\end{titlepage}
-\pagebreak \newpage
-\doublespacing
+    This is the abstract.
+    \vspace{1em}\\
+    \noindent\textbf{Keywords:} climate, AI, robots\\
+    \bigskip
+\end{abstract}
+\newpage
+test
 
-\section{Introduction}\label{sec:intro}
-Parentheses citation \citep{DunningHuchetteLubin2017}, and author-year citation \citet{DunningHuchetteLubin2017}, cite a book \citep[\S 2.1.1]{DunningHuchetteLubin2017}
+% \printbibliography
 
-% \Cref{} 可以用于表格、图片、章节的交叉引用, 不可用于参考文献
-ref you section \Cref{sec:intro}, cite Appendix \ref{sec:app}.
-\begin{figure}[!htbp]
-    \centering
-    % 这里导入的tikz要通过vsc的httpgd浏览器导出， 450 * 300， tikz可以保证最后字体和正文字体一致，字号和ggplot2指定的一致
-    \input{./figure/plot.tex}
-    \caption{a demo figure plotted by ggplot2 in R}
-    \label{fig:demo}
-\end{figure}
-cite my figure, \Cref{fig:demo}
-
-\begin{figure}[!htbp]
-    \centering
-    % \def\svgwidth{\linewidth}
-    \input{figure/draw.pdf_tex}
-\end{figure}
-
-
-\section{Literature Review}
-\section{Data and Descriptive Analysis}
-\section{Robustness Check}
-\section{Managerial Implications}
-\subsection{Posterior Analysis}
-\subsection{Implication on Platform}
-\section{Conclusion and Limitations}
-
-
-% 附录，另起新页
-\clearpage
-\setcounter{section}{0}
-\setcounter{subsection}{0}
-\setcounter{equation}{0}
-\setcounter{table}{0}
-\setcounter{figure}{0}
-% 修改章节、图表的编号
-\renewcommand{\thesection}{\Alph{section}}
-\renewcommand{\theequation}{\thesection.\arabic{equation}}
-\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
-\renewcommand{\thetable}{\thesection.\arabic{table}}
-\renewcommand{\thefigure}{\thesection.\arabic{figure}}
-\section{Appendix} \label{sec:app}
-\subsection{test}
-
-
-% 参考文献，另起新页，格式为APA格式
-\clearpage
-\printbibliography
 \end{document}
