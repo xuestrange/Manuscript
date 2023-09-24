@@ -1,4 +1,6 @@
 ## Core latex/pdflatex auxiliary files:
+.history/
+build/
 *.aux
 *.lof
 *.log
