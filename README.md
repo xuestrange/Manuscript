@@ -4,6 +4,8 @@ A lightweight LaTeX template for drafting academic manuscripts. It provides a
 custom `manuscript` document class with common research-paper defaults, including
 double spacing, 1-inch margins, APA-style references, author handling, figures,
 tables, algorithms, math packages, hyperlinks, and clever cross-references.
+## Preview
+![Preview](https://raw.githubusercontent.com/xuestrange/picGoUploader/main/img/Screenshot%202026-06-15%20at%2013-07-08.png)
 
 ## File Structure
 
