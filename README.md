@@ -1,6 +1,56 @@
-# A Simple and Complete LaTeX Template
-A simple LaTeX manuscript template, especially for social/management science students
-<img src="https://raw.githubusercontent.com/xuestrange/picGoUploader/main/img/20230924160204.png">
-![image](https://github.com/xuestrange/Manuscript/assets/59390321/b4363f27-317a-488c-ad98-d32d6c136fb0)
-![image](https://github.com/xuestrange/Manuscript/assets/59390321/bc7b4b6e-6c3a-413f-ab2b-b880acb5a98d)
+# Manuscript Template
 
+A lightweight LaTeX template for drafting academic manuscripts. It provides a
+custom `manuscript` document class with common research-paper defaults, including
+double spacing, 1-inch margins, APA-style references, author handling, figures,
+tables, algorithms, math packages, hyperlinks, and clever cross-references.
+
+## File Structure
+
+- `main.tex` - main manuscript source and example content.
+- `manuscript.cls` - custom document class and layout settings.
+- `ref.bib` - BibLaTeX bibliography database.
+- `figure/` - place figures and plots here.
+- `table/` - place table inputs or exported table files here.
+
+## Core Usage
+
+Edit `main.tex` to write the paper:
+
+Use `anonymous`  mode to hide author information for review:
+```tex
+\documentclass[anonymous]{manuscript}
+```
+
+Use the normal class mode to show authors:
+```tex
+\documentclass{manuscript}
+```
+
+Add citations to `ref.bib`, then cite them with the included natbib-compatible
+BibLaTeX commands:
+
+```tex
+\citet{key}
+\citep{key}
+```
+
+Reference figures, tables, sections, and equations with `cleveref`:
+
+```tex
+\Cref{fig:example}
+```
+
+## Advantages
+
+- Ready for manuscript drafting with sensible defaults for spacing, margins, page
+  numbers, references, figures, tables, math, and algorithms.
+- Anonymous-review support is built into the document class, so switching between
+  review and author-visible versions only requires changing the class option.
+- Author metadata is concise and consistent through the `\Author{name}{affiliation}{email}`
+  command.
+- APA-style bibliography support is already configured with `biblatex`, `biber`,
+  and natbib-compatible citation commands.
+- Cross-references use `cleveref`, giving readable labels such as "Figure",
+  "Section", and "Equation" automatically.
+- Build outputs are kept in `build/`, keeping the source directory easy to scan.
